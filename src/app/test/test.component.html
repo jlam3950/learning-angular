@@ -1,0 +1,8 @@
+<p>test works!</p>
+<input type = 'text'
+ class ='form-control'
+ [(ngModel)] = 'testName'>
+ <p>{{testName}}</p>
+<button [disabled]='testNameFlag == true'
+ class = 'btn btn-primary'
+ (click) = "resetServer()">Reset Server</button>

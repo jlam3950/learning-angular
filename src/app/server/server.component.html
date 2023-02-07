@@ -1,6 +1,13 @@
-<p>Server with ID {{ serverId }} and is {{ boolTest ? 'true' : 'false'}} </p>
-<button class="btn btn-primary mb-4" 
+<!-- <p [ngStyle] = "{backgroundColor: getColor()}">Server with ID {{ serverId }} and is {{serverStatus}} </p> -->
+<label>Server Name</label>
+<input type = "text"
+ class = 'form-control'
+ [(ngModel)] ="serverName">
+ <!-- (input)=" onUpdateServerName($event)"> -->
+ <!-- <p>{{serverName}}</p> -->
+<button class="btn btn-primary mb-4 mt-4" 
 [disabled] = "!allowNewServer"
 (click)="onCreateServer()">Add Server</button>
-<p>{{ serverCreationStatus }}</p>
+<p *ngIf ="serverCreated">Server was created, server name is {{serverName}}</p>
+<!-- <p>{{ serverCreationStatus }}</p> -->
 <!-- square brackets show that property binding is allowed -->
