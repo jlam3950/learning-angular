@@ -1,0 +1,6 @@
+<p>Server with ID {{ serverId }} and is {{ boolTest ? 'true' : 'false'}} </p>
+<button class="btn btn-primary mb-4" 
+[disabled] = "!allowNewServer"
+(click)="onCreateServer()">Add Server</button>
+<p>{{ serverCreationStatus }}</p>
+<!-- square brackets show that property binding is allowed -->
